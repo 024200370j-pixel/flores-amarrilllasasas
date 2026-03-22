@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregunta importante</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, #fff9c4, #fce4ec);
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.botones {
+    position: relative;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.si {
+    background-color: #ffca28;
+}
+
+.no {
+    background-color: #ef5350;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>¿Quieres salir conmigo? 💛</h1>
+
+    <div class="botones">
+        <button class="si" onclick="aceptar()">Sí 💛</button>
+        <button class="no" onmouseover="moverNo()">No ❌</button>
+    </div>
+</div>
+
+<script>
+function aceptar() {
+    alert("Sabía que dirías que sí 😏💛");
+}
+
+function moverNo() {
+    const boton = document.querySelector(".no");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    boton.style.transform = `translate(${x}px, ${y}px)`;
+}
+</script>
+
+</body>
+</html>
